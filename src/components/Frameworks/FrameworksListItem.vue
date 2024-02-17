@@ -33,13 +33,6 @@ const props = defineProps({
 	border-radius: 10px;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
 	background: #fff;
-	&__picture {
-		img {
-			border-radius: 10px 0 0 10px;
-			width: 535px;
-			height: 100%;
-		}
-	}
 	&__description {
 		color: #808080;
 		margin-top: 10px;

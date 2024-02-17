@@ -1,6 +1,6 @@
 <script setup>
-import FrameworksListItem from './FrameworksListItem.vue'
 import { useFrameworks } from '../../store/frameworks.js'
+import FrameworksListItem from './FrameworksListItem.vue'
 import { getImageUrl } from '../../utils/imgUrlDynamic.js'
 const store = useFrameworks()
 </script>
@@ -40,6 +40,11 @@ const store = useFrameworks()
 				padding-left: 11px;
 			}
 		}
+	}
+	img {
+		border-radius: 10px 0 0 10px;
+		width: 535px;
+		height: 100%;
 	}
 }
 </style>

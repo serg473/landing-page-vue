@@ -31,15 +31,11 @@ const props = defineProps({
 	gap: 20px;
 	border-radius: 10px;
 	background: #fff;
-	&__picture {
-		img {
-			width: 345px;
-		}
-	}
 	&__description {
 		color: #808080;
 		margin-top: 10px;
 		padding-right: 20px;
+		line-height: 162%;
 	}
 	&__content {
 		padding: 26px 0 26px 0;

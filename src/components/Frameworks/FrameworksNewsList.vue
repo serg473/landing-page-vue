@@ -1,7 +1,7 @@
 <script setup>
-import FrameworksNewsListItem from './FrameworksNewsListItem.vue'
 import { useFrameworks } from '../../store/frameworks.js'
 import { getImageUrl } from '../../utils/imgUrlDynamic.js'
+import FrameworksNewsListItem from './FrameworksNewsListItem.vue'
 const store = useFrameworks()
 </script>
 <template>
@@ -28,5 +28,9 @@ const store = useFrameworks()
 	display: flex;
 	background: white;
 	padding: 0 102px 0 122px;
+	img {
+		width: 345px;
+		height: 100%;
+	}
 }
 </style>

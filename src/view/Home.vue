@@ -41,6 +41,9 @@ import FrameworksNewsList from '../components/Frameworks/FrameworksNewsList.vue'
 		<div class="home__news-frameworks news">
 			<FrameworksNewsList />
 		</div>
+		<div class="home__applications applications">
+			<h3 class="applications__title">Applications</h3>
+		</div>
 	</main>
 </template>
 <style lang="scss">
@@ -56,6 +59,9 @@ import FrameworksNewsList from '../components/Frameworks/FrameworksNewsList.vue'
 	}
 	&__news-frameworks {
 		margin-top: 61px;
+	}
+	&__applications {
+		margin-top: 44px;
 	}
 }
 .wallpaper {
@@ -99,6 +105,15 @@ import FrameworksNewsList from '../components/Frameworks/FrameworksNewsList.vue'
 		font-size: 28px;
 		text-align: center;
 		color: #3d3d3d;
+		margin-bottom: 45px;
+	}
+}
+.applications {
+	&__title {
+		font-size: 28px;
+		font-weight: bold;
+		color: #3d3d3d;
+		text-align: center;
 		margin-bottom: 45px;
 	}
 }
