@@ -20,8 +20,7 @@ const props = defineProps({
 				<slot name="desc" :desc="item.description"></slot>
 			</div>
 			<div class="framework-item__group-btn">
-				<Button isActive="true">Read more</Button>
-				<Button>Webinar</Button>
+				<Button isActive="true">{{ item.button }}</Button>
 			</div>
 		</div>
 	</div>
@@ -29,24 +28,21 @@ const props = defineProps({
 <style scoped lang="scss">
 .framework-item {
 	display: flex;
-	gap: 73px;
+	gap: 20px;
 	border-radius: 10px;
-	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
 	background: #fff;
 	&__picture {
 		img {
-			border-radius: 10px 0 0 10px;
-			width: 535px;
-			height: 100%;
+			width: 345px;
 		}
 	}
 	&__description {
 		color: #808080;
 		margin-top: 10px;
-		height: 100%;
+		padding-right: 20px;
 	}
 	&__content {
-		padding: 27px 0 23px 0;
+		padding: 26px 0 26px 0;
 		position: relative;
 	}
 	&__group-btn {

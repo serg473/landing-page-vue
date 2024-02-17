@@ -1,6 +1,7 @@
 <script setup>
 import Button from '../components/Button.vue'
 import FrameworksList from '../components/Frameworks/FrameworksList.vue'
+import FrameworksNewsList from '../components/Frameworks/FrameworksNewsList.vue'
 </script>
 <template>
 	<main class="main home">
@@ -37,6 +38,9 @@ import FrameworksList from '../components/Frameworks/FrameworksList.vue'
 				<FrameworksList />
 			</div>
 		</div>
+		<div class="home__news-frameworks news">
+			<FrameworksNewsList />
+		</div>
 	</main>
 </template>
 <style lang="scss">
@@ -49,6 +53,9 @@ import FrameworksList from '../components/Frameworks/FrameworksList.vue'
 		text-align: center;
 		text-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
 		color: #ffffff;
+	}
+	&__news-frameworks {
+		margin-top: 61px;
 	}
 }
 .wallpaper {
@@ -86,6 +93,7 @@ import FrameworksList from '../components/Frameworks/FrameworksList.vue'
 	}
 }
 .frameworks {
+	background: #f5f7fa;
 	&__title {
 		font-weight: bold;
 		font-size: 28px;
