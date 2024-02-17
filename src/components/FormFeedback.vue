@@ -4,6 +4,8 @@ import BaseInput from './BaseInput.vue'
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
 import { reactive, ref } from 'vue'
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
 
 const validations = {
 	firstName: { required, minLength: minLength(3) },
@@ -38,9 +40,14 @@ const resetFields = () => {
 const v$ = useVuelidate(validations, form)
 const submit = async () => {
 	const valid = await v$.value.$validate()
-
 	if (valid) {
-		alert('Успешно отправлено!')
+		toast('Data sent successfully!', {
+			type: 'success',
+			position: 'top-center',
+			autoClose: 4000,
+			transition: 'zoom',
+			dangerouslyHTMLString: true,
+		})
 		await resetFields()
 	}
 }

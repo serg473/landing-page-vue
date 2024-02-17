@@ -12,6 +12,7 @@ const props = defineProps({
 $bg-btn: #71a3ff;
 .btn {
 	font-family: inherit;
+	font-size: inherit;
 	border: 1px solid $bg-btn;
 	border-radius: 10px;
 	width: 200px;
