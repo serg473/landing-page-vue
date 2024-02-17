@@ -30,6 +30,9 @@ import Button from '../components/Button.vue'
 				</div>
 			</div>
 		</div>
+		<div class="home__frameworks frameworks">
+			<h3 class="frameworks__title">Frameworks</h3>
+		</div>
 	</main>
 </template>
 <style lang="scss">
@@ -60,6 +63,7 @@ import Button from '../components/Button.vue'
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-weight: 400;
+	margin-bottom: 44px;
 	&__container {
 		display: flex;
 		gap: 40px;
@@ -69,12 +73,21 @@ import Button from '../components/Button.vue'
 		font-size: 28px;
 	}
 	&__description {
-		margin-top: 16px;
+		margin: 16px 0;
 		color: #808080;
 	}
 	&__group-btn {
 		display: flex;
 		gap: 23px;
+	}
+}
+.frameworks {
+	&__title {
+		font-weight: bold;
+		font-size: 28px;
+		text-align: center;
+		color: #3d3d3d;
+		margin-bottom: 45px;
 	}
 }
 </style>

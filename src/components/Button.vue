@@ -8,7 +8,7 @@ const props = defineProps({
 		<slot></slot>
 	</button>
 </template>
-<style lang="scss">
+<style scoped lang="scss">
 $bg-btn: #71a3ff;
 .btn {
 	font-family: inherit;
@@ -18,6 +18,8 @@ $bg-btn: #71a3ff;
 	height: 40px;
 	color: #3d3d3d;
 	padding: 11px 0 9px 0;
+	background: #ffffff;
+	cursor: pointer;
 	&.active {
 		color: #fff;
 		background: $bg-btn;
