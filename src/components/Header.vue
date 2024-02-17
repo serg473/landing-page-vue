@@ -37,7 +37,7 @@ $link: #3d3d3d;
 			text-decoration: none;
 			color: $link;
 			text-transform: uppercase;
-
+			line-height: 21.09px;
 			&:hover {
 				color: #71a3ff;
 			}

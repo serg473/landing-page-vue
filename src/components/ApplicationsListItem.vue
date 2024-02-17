@@ -30,6 +30,7 @@ const props = defineProps({
 		position: absolute;
 		bottom: 0;
 		width: 100%;
+		line-height: 20px;
 	}
 }
 </style>

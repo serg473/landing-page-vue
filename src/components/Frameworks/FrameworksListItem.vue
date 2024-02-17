@@ -37,6 +37,7 @@ const props = defineProps({
 		color: #808080;
 		margin-top: 10px;
 		height: 100%;
+		line-height: 26px;
 	}
 	&__content {
 		padding: 27px 0 23px 0;
@@ -52,6 +53,7 @@ const props = defineProps({
 		font-weight: 700;
 		font-size: 24px;
 		color: #3d3d3d;
+		line-height: 30px;
 	}
 }
 </style>

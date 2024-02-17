@@ -1,7 +1,7 @@
 <script setup>
 import { useFrameworks } from '../../store/frameworks.js'
-import FrameworksListItem from './FrameworksListItem.vue'
 import { getImageUrl } from '../../utils/imgUrlDynamic.js'
+import FrameworksListItem from './FrameworksListItem.vue'
 const store = useFrameworks()
 </script>
 <template>

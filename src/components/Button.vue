@@ -20,6 +20,7 @@ $bg-btn: #71a3ff;
 	padding: 11px 0 9px 0;
 	background: #ffffff;
 	cursor: pointer;
+	line-height: 20px;
 	&.active {
 		color: #fff;
 		background: $bg-btn;

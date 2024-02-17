@@ -3,6 +3,7 @@ import ApplicationsList from '@/components/ApplicationsList.vue'
 import Button from '@/components/Button.vue'
 import FrameworksList from '@/components/Frameworks/FrameworksList.vue'
 import FrameworksNewsList from '@/components/Frameworks/FrameworksNewsList.vue'
+import FormFeedback from '../components/FormFeedback.vue'
 </script>
 <template>
 	<main class="main home">
@@ -48,6 +49,10 @@ import FrameworksNewsList from '@/components/Frameworks/FrameworksNewsList.vue'
 				<ApplicationsList />
 			</div>
 		</div>
+		<div class="home__contact contact">
+			<h3 class="contact__title">Contact Us</h3>
+			<FormFeedback />
+		</div>
 	</main>
 </template>
 <style lang="scss">
@@ -67,15 +72,22 @@ import FrameworksNewsList from '@/components/Frameworks/FrameworksNewsList.vue'
 	&__applications {
 		margin-top: 44px;
 	}
+	&__contact {
+		padding: 44px 0 59px 0;
+		margin-top: 56px;
+		background-color: #ffffff;
+	}
 }
 .wallpaper {
 	&__title {
 		font-weight: 700;
 		font-size: 70px;
+		line-height: 87.5px;
 	}
 	&__subtitle {
 		font-weight: 400;
 		font-size: 36px;
+		line-height: 45px;
 	}
 }
 .about {
@@ -92,10 +104,12 @@ import FrameworksNewsList from '@/components/Frameworks/FrameworksNewsList.vue'
 	&__title {
 		font-weight: bold;
 		font-size: 28px;
+		line-height: 35px;
 	}
 	&__description {
 		margin: 16px 0;
 		color: #808080;
+		line-height: 26px;
 	}
 	&__group-btn {
 		display: flex;
@@ -119,6 +133,14 @@ import FrameworksNewsList from '@/components/Frameworks/FrameworksNewsList.vue'
 		color: #3d3d3d;
 		text-align: center;
 		margin-bottom: 45px;
+	}
+}
+.contact {
+	&__title {
+		font-weight: 700;
+		font-size: 28px;
+		text-align: center;
+		color: #3d3d3d;
 	}
 }
 </style>
