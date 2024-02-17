@@ -12,6 +12,7 @@ const props = defineProps({
 $bg-btn: #71a3ff;
 .btn {
 	font-family: inherit;
+	font-size: inherit;
 	border: 1px solid $bg-btn;
 	border-radius: 10px;
 	width: 200px;
@@ -21,9 +22,18 @@ $bg-btn: #71a3ff;
 	background: #ffffff;
 	cursor: pointer;
 	line-height: 20px;
+	transition: all 0.4s ease;
 	&.active {
 		color: #fff;
 		background: $bg-btn;
+		&:hover {
+			background-color: #ffffff;
+			color: #3d3d3d;
+		}
+	}
+	&:hover {
+		background: $bg-btn;
+		color: #ffffff;
 	}
 }
 </style>

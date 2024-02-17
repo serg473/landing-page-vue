@@ -1,83 +1,128 @@
 <script setup>
 import Button from '../components/Button.vue'
+import BaseInput from './BaseInput.vue'
+import { useVuelidate } from '@vuelidate/core'
+import { required, email, minLength } from '@vuelidate/validators'
+import { reactive, ref } from 'vue'
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
+
+const validations = {
+	firstName: { required, minLength: minLength(3) },
+	lastName: { required, minLength: minLength(3) },
+	company: { required, minLength: minLength(3) },
+	email: { required, minLength: minLength(3), email },
+	job: { required, minLength: minLength(3) },
+	country: { required, minLength: minLength(3) },
+	state: { required, minLength: minLength(3) },
+	zip: { required, minLength: minLength(1) },
+}
+const form = reactive({
+	firstName: '',
+	lastName: '',
+	company: '',
+	email: '',
+	job: '',
+	country: '',
+	state: '',
+	zip: '',
+})
+const resetFields = () => {
+	form.firstName = ''
+	form.lastName = ''
+	form.company = ''
+	form.email = ''
+	form.job = ''
+	form.country = ''
+	form.state = ''
+	form.zip = ''
+}
+const v$ = useVuelidate(validations, form)
+const submit = async () => {
+	const valid = await v$.value.$validate()
+	if (valid) {
+		toast('Data sent successfully!', {
+			type: 'success',
+			position: 'top-center',
+			autoClose: 4000,
+			transition: 'zoom',
+			dangerouslyHTMLString: true,
+		})
+		await resetFields()
+	}
+}
 </script>
 <template>
 	<div class="feedback">
 		<form @submit.prevent class="feedback__form">
-			<div class="feedback__form-item">
-				<label for="firstName">First Name *</label>
-				<input
-					id="firstName"
-					name="firstName"
-					type="text"
-					placeholder="Enter your First name"
-				/>
-			</div>
-			<div class="feedback__form-item">
-				<label for="lastName">Last Name *</label>
-				<input
-					id="lastName"
-					name="lastName"
-					type="text"
-					placeholder="Enter your Last name"
-				/>
-			</div>
+			<BaseInput
+				name="firstName"
+				v-model="form.firstName"
+				type="text"
+				label="First Name *"
+				placeholder="Enter your First name"
+				:errors="v$.firstName.$errors"
+			/>
 
-			<div class="feedback__form-item">
-				<label for="company">Company *</label>
-				<input
-					id="company"
-					name="company"
-					type="text"
-					placeholder="Enter your company"
-				/>
-			</div>
-			<div class="feedback__form-item">
-				<label for="email">Email *</label>
-				<input
-					id="email"
-					name="email"
-					type="text"
-					placeholder="Enter Your Email"
-				/>
-			</div>
+			<BaseInput
+				name="lastName"
+				v-model="form.lastName"
+				type="text"
+				label="Last Name *"
+				placeholder="Enter your Last name"
+				:errors="v$.lastName.$errors"
+			/>
+			<BaseInput
+				name="company"
+				v-model="form.company"
+				type="text"
+				label="Company *"
+				placeholder="Enter your company"
+				:errors="v$.company.$errors"
+			/>
+			<BaseInput
+				name="email"
+				v-model="form.email"
+				type="text"
+				label="Email *"
+				placeholder="Enter your email"
+				:errors="v$.email.$errors"
+			/>
 
-			<div class="feedback__form-item">
-				<label for="job">Job Title *</label>
-				<input id="job" name="job" type="text" placeholder="Enter job title" />
-			</div>
-
-			<div class="feedback__form-item">
-				<label for="country">Country</label>
-				<input
-					id="country"
-					name="country"
-					type="text"
-					placeholder="Enter Your Country"
-				/>
-			</div>
-
-			<div class="feedback__form-item">
-				<label for="state">State *</label>
-				<input
-					id="state"
-					name="state"
-					type="text"
-					placeholder="Enter your State"
-				/>
-			</div>
-
-			<div class="feedback__form-item">
-				<label for="zip">Zip code *</label>
-				<input
-					id="zip"
-					name="zip"
-					type="text"
-					placeholder="Enter Your Zip Code"
-				/>
-			</div>
+			<BaseInput
+				name="job"
+				v-model="form.job"
+				type="text"
+				label="Job Title *"
+				placeholder="Enter Job Title"
+				:errors="v$.job.$errors"
+			/>
+			<BaseInput
+				name="country"
+				v-model="form.country"
+				type="text"
+				label="Country *"
+				placeholder="Enter Your Country"
+				:errors="v$.country.$errors"
+			/>
+			<BaseInput
+				name="state"
+				v-model="form.state"
+				type="text"
+				label="State *"
+				placeholder="Enter Your State"
+				:errors="v$.state.$errors"
+			/>
+			<BaseInput
+				name="zip"
+				v-model="form.zip"
+				type="text"
+				label="Zip code *"
+				placeholder="Enter Your Zip Code"
+				:errors="v$.zip.$errors"
+			/>
 			<div class="feedback__submit">
-				<Button isActive="true"> Submit </Button>
+				<Button @click="submit" isActive="true"> Submit </Button>
 			</div>
 		</form>
 	</div>
@@ -92,30 +137,6 @@ import Button from '../components/Button.vue'
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 15px 13.95px;
-	}
-	&__form-item {
-		display: flex;
-		flex-direction: column;
-		width: 278px;
-		gap: 6px;
-		label {
-			color: #3d3d3d;
-			line-height: 24px;
-		}
-		input {
-			padding: 9px 31px 9px 11px;
-			border-radius: 10px;
-			background: #f8f8f8;
-			line-height: 20px;
-			width: 100%;
-			height: 40px;
-			border: none;
-			font-size: 16px;
-			font-family: inherit;
-			&::placeholder {
-				color: #c4c4c4;
-			}
-		}
 	}
 	&__submit {
 		margin-top: 26px;
