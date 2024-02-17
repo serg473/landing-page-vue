@@ -4,11 +4,13 @@
 		<img class="header__logo" src="../assets/img/logo.svg" alt="Logo" />
 		<nav class="header__menu menu">
 			<ul class="menu__list">
-				<li class="menu__list-item"><a href="#">Home</a></li>
-				<li class="menu__list-item"><a href="#">About us</a></li>
-				<li class="menu__list-item"><a href="#">Frameworks</a></li>
-				<li class="menu__list-item"><a href="#">Applications</a></li>
-				<li class="menu__list-item"><a href="#">Contact us</a></li>
+				<li class="menu__list-item"><a href="/">Home</a></li>
+				<li class="menu__list-item"><a href="#about">About us</a></li>
+				<li class="menu__list-item"><a href="#frameworks">Frameworks</a></li>
+				<li class="menu__list-item">
+					<a href="#applications">Applications</a>
+				</li>
+				<li class="menu__list-item"><a href="#contact">Contact us</a></li>
 			</ul>
 		</nav>
 	</header>

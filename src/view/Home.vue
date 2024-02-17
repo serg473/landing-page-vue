@@ -11,7 +11,7 @@ import FormFeedback from '../components/FormFeedback.vue'
 			<h2 class="wallpaper__title">Welcome to Test Page</h2>
 			<h3 class="wallpaper__subtitle">Front-end developer</h3>
 		</div>
-		<div class="home__about about">
+		<div class="home__about about" id="about">
 			<div class="container-content about__container">
 				<div class="about__article">
 					<h3 class="about__title">About us</h3>
@@ -34,7 +34,7 @@ import FormFeedback from '../components/FormFeedback.vue'
 				</div>
 			</div>
 		</div>
-		<div class="home__frameworks frameworks">
+		<div class="home__frameworks frameworks" id="frameworks">
 			<h3 class="frameworks__title">Frameworks</h3>
 			<div class="container-content">
 				<FrameworksList />
@@ -43,13 +43,13 @@ import FormFeedback from '../components/FormFeedback.vue'
 		<div class="home__news-frameworks news">
 			<FrameworksNewsList />
 		</div>
-		<div class="home__applications applications">
+		<div class="home__applications applications" id="applications">
 			<h3 class="applications__title">Applications</h3>
 			<div class="container-content">
 				<ApplicationsList />
 			</div>
 		</div>
-		<div class="home__contact contact">
+		<div class="home__contact contact" id="contact">
 			<h3 class="contact__title">Contact Us</h3>
 			<FormFeedback />
 		</div>
