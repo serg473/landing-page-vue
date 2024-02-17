@@ -21,7 +21,7 @@ $link: #3d3d3d;
 	justify-content: space-between;
 	align-items: center;
 	font-family: 'Roboto', sans-serif;
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
 	background: #fff;
 }
 

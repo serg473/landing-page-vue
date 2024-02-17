@@ -1,5 +1,6 @@
 <script setup>
 import Button from '../components/Button.vue'
+import FrameworksList from '../components/Frameworks/FrameworksList.vue'
 </script>
 <template>
 	<main class="main home">
@@ -32,6 +33,9 @@ import Button from '../components/Button.vue'
 		</div>
 		<div class="home__frameworks frameworks">
 			<h3 class="frameworks__title">Frameworks</h3>
+			<div class="container-content">
+				<FrameworksList />
+			</div>
 		</div>
 	</main>
 </template>
