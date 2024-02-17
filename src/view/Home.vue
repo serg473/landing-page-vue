@@ -1,7 +1,8 @@
 <script setup>
-import Button from '../components/Button.vue'
-import FrameworksList from '../components/Frameworks/FrameworksList.vue'
-import FrameworksNewsList from '../components/Frameworks/FrameworksNewsList.vue'
+import ApplicationsList from '@/components/ApplicationsList.vue'
+import Button from '@/components/Button.vue'
+import FrameworksList from '@/components/Frameworks/FrameworksList.vue'
+import FrameworksNewsList from '@/components/Frameworks/FrameworksNewsList.vue'
 </script>
 <template>
 	<main class="main home">
@@ -43,6 +44,9 @@ import FrameworksNewsList from '../components/Frameworks/FrameworksNewsList.vue'
 		</div>
 		<div class="home__applications applications">
 			<h3 class="applications__title">Applications</h3>
+			<div class="container-content">
+				<ApplicationsList />
+			</div>
 		</div>
 	</main>
 </template>
