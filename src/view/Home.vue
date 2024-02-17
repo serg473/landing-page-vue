@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import Button from '../components/Button.vue'
+</script>
 <template>
 	<main class="main home">
 		<div class="home__wallpaper wallpaper">
@@ -18,6 +20,10 @@
 						remaining essentially unchanged. It was popularised in the 1960s
 						with the release of Letraset.
 					</p>
+					<div class="about__group-btn">
+						<Button :isActive="true">Read more</Button>
+						<Button>Contact us</Button>
+					</div>
 				</div>
 				<div class="about__preview">
 					<img src="../assets/img/information/about.png" alt="About" />
@@ -65,6 +71,10 @@
 	&__description {
 		margin-top: 16px;
 		color: #808080;
+	}
+	&__group-btn {
+		display: flex;
+		gap: 23px;
 	}
 }
 </style>
