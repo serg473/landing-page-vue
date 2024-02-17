@@ -22,6 +22,7 @@ const emit = defineEmits(['update:modelValue'])
 	<div class="feedback__form-item">
 		<label :for="name">{{ label }}</label>
 		<input
+			:class="{ 'error-border': errors.length > 0 }"
 			:value="modelValue"
 			:id="name"
 			:name="name"
@@ -57,6 +58,9 @@ const emit = defineEmits(['update:modelValue'])
 		&::placeholder {
 			color: #c4c4c4;
 		}
+	}
+	.error-border {
+		border: 1px solid red;
 	}
 }
 .error {
