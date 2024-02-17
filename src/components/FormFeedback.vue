@@ -3,7 +3,7 @@ import Button from '../components/Button.vue'
 </script>
 <template>
 	<div class="feedback">
-		<form class="feedback__form">
+		<form @submit.prevent class="feedback__form">
 			<div class="feedback__form-item">
 				<label for="firstName">First Name *</label>
 				<input
