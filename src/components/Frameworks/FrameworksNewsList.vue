@@ -36,6 +36,10 @@ const store = useFrameworks()
 	img {
 		width: 345px;
 		height: 100%;
+		@media screen and (max-width: 640px) {
+			width: 100%;
+			height: 236px;
+		}
 	}
 }
 </style>

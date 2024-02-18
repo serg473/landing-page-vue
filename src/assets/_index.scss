@@ -6,7 +6,8 @@
 html {
 	scroll-behavior: smooth;
 }
-html,body{
+html,
+body {
 	overflow-x: hidden;
 }
 body {
@@ -14,7 +15,7 @@ body {
 	font-weight: 400;
 	font-size: 16px;
 	background: #f5f5f5;
-	padding: 20px 0;
+	padding-top: 20px;
 }
 
 .container {
@@ -24,13 +25,20 @@ body {
 	@media screen and (max-width: 1400px) {
 		max-width: 1199px;
 	}
-	@media screen and (max-width: 1040px) {
+	@media screen and (max-width: 1200px) {
 		max-width: 960px;
+	}
+	@media screen and (max-width: 970px) {
+		max-width: 640px;
+	}
+	@media screen and (max-width: 640px) {
+		max-width: 100%;
+		width: 100%;
 	}
 }
 .container-content {
 	max-width: 1195px;
 	margin: 0 auto;
 	padding: 0 15px;
-}
 
+}

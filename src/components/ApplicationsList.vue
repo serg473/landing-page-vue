@@ -26,7 +26,19 @@ const store = useApplications()
 	flex-wrap: wrap;
 	gap: 45px 85px;
 	@media screen and (max-width: 1400px) {
-		gap: 45px 70px;
+		gap: 45px 77px;
+	}
+	@media screen and (max-width: 1200px) {
+		gap: 25px 77px;
+	}
+	@media screen and (max-width: 640px) {
+		justify-content: space-between;
+		gap: 25px 0;
+	}
+	img {
+		@media screen and (max-width: 1200px) {
+			width: 100%;
+		}
 	}
 }
 </style>

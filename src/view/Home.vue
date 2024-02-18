@@ -65,17 +65,30 @@ import FormFeedback from '../components/FormFeedback.vue'
 		text-align: center;
 		text-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
 		color: #ffffff;
+		@media screen and (max-width: 970px) {
+			padding: 100px 0;
+		}
+		@media screen and (max-width: 640px) {
+			padding: 100px 0 58px;
+		}
 	}
 	&__news-frameworks {
 		margin-top: 61px;
 	}
 	&__applications {
 		margin-top: 44px;
+		@media screen and (max-width: 640px) {
+			margin-top: 25px;
+		}
 	}
 	&__contact {
 		padding: 44px 0 59px 0;
 		margin-top: 56px;
 		background-color: #ffffff;
+		@media screen and (max-width: 640px) {
+			padding: 27px 0 27px 0;
+			margin-top: 35px;
+		}
 	}
 }
 .wallpaper {
@@ -83,11 +96,23 @@ import FormFeedback from '../components/FormFeedback.vue'
 		font-weight: 700;
 		font-size: 70px;
 		line-height: 87.5px;
+		@media screen and (max-width: 970px) {
+			font-size: 47px;
+			line-height: 69.5px;
+		}
+		@media screen and (max-width: 640px) {
+			font-size: 26px;
+			line-height: 10.5px;
+		}
 	}
 	&__subtitle {
 		font-weight: 400;
 		font-size: 36px;
 		line-height: 45px;
+		@media screen and (max-width: 640px) {
+			font-size: 24px;
+			line-height: 69.5px;
+		}
 	}
 }
 .about {
@@ -97,37 +122,50 @@ import FormFeedback from '../components/FormFeedback.vue'
 	background-size: cover;
 	font-weight: 400;
 	margin-bottom: 44px;
-	@media screen and (max-width: 1040px) {
+	@media screen and (max-width: 1200px) {
 		padding: 50px 0;
 	}
+	@media screen and (max-width: 640px) {
+		margin-bottom: 25px;
+		padding: 25px 0;
+	}
 	&__preview {
-		@media screen and (max-width: 1040px) {
+		@media screen and (max-width: 1200px) {
 			order: 0;
 			width: 100%;
 			padding: 0;
 		}
 		img {
-			@media screen and (max-width: 1040px) {
+			@media screen and (max-width: 1200px) {
 				width: 100%;
 			}
 		}
 	}
 	&__article {
-		@media screen and (max-width: 1040px) {
+		@media screen and (max-width: 1200px) {
 			order: 1;
+		}
+		@media screen and (max-width: 640px) {
+			overflow: auto;
 		}
 	}
 	&__container {
 		display: flex;
 		gap: 40px;
-		@media screen and (max-width: 1040px) {
+		@media screen and (max-width: 1200px) {
 			flex-wrap: wrap;
+		}
+		@media screen and (max-width: 970px) {
+			gap: 25px;
 		}
 	}
 	&__title {
 		font-weight: bold;
 		font-size: 28px;
 		line-height: 35px;
+		@media screen and (max-width: 970px) {
+			line-height: 24pxw;
+		}
 	}
 	&__description {
 		margin: 16px 0;
@@ -147,6 +185,9 @@ import FormFeedback from '../components/FormFeedback.vue'
 		text-align: center;
 		color: #3d3d3d;
 		margin-bottom: 45px;
+		@media screen and (max-width: 640px) {
+			margin-bottom: 25px;
+		}
 	}
 }
 .applications {
@@ -156,6 +197,9 @@ import FormFeedback from '../components/FormFeedback.vue'
 		color: #3d3d3d;
 		text-align: center;
 		margin-bottom: 45px;
+		@media screen and (max-width: 640px) {
+			margin-bottom: 25px;
+		}
 	}
 }
 .contact {
