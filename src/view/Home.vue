@@ -3,10 +3,14 @@ import ApplicationsList from '@/components/ApplicationsList.vue'
 import Button from '@/components/Button.vue'
 import FrameworksList from '@/components/Frameworks/FrameworksList.vue'
 import FrameworksNewsList from '@/components/Frameworks/FrameworksNewsList.vue'
+import MobileMenu from '@/components/MobileMenu.vue'
+
 import FormFeedback from '../components/FormFeedback.vue'
+
 </script>
 <template>
 	<main class="main home">
+		
 		<div class="home__wallpaper wallpaper">
 			<h2 class="wallpaper__title">Welcome to Test Page</h2>
 			<h3 class="wallpaper__subtitle">Front-end developer</h3>
