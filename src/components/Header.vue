@@ -1,9 +1,14 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+import MobileMenu from './MobileMenu.vue'
+const isOpen = ref(false)
+const hideModal = () => (isOpen.value = false)
+</script>
 <template>
 	<header class="header">
 		<img class="header__logo" src="../assets/img/logo.svg" alt="Logo" />
 		<nav class="header__menu menu">
-			<div class="menu__mobile">
+			<div class="menu__mobile" @click="isOpen = true">
 				<img src="../assets/img/menu.svg" alt="Menu mobile" />
 			</div>
 			<ul class="menu__list">
@@ -16,10 +21,24 @@
 				<li class="menu__list-item"><a href="#contact">Contact us</a></li>
 			</ul>
 		</nav>
+		<Teleport to="body">
+			<Transition>
+				<MobileMenu @isShow="hideModal" v-if="isOpen" />
+			</Transition>
+		</Teleport>
 	</header>
 </template>
 <style scoped lang="scss">
 $link: #3d3d3d;
+.v-enter-active,
+.v-leave-active {
+	transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+	opacity: 0;
+}
 .header {
 	padding: 21px 77px 21px 123px;
 	display: flex;
