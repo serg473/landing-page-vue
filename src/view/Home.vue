@@ -30,7 +30,7 @@ import FormFeedback from '../components/FormFeedback.vue'
 					</div>
 				</div>
 				<div class="about__preview">
-					<img src="../assets/img/about.png" alt="About" />
+					<img src="../assets/img/about.webp" alt="About" />
 				</div>
 			</div>
 		</div>
@@ -59,7 +59,7 @@ import FormFeedback from '../components/FormFeedback.vue'
 .home {
 	&__wallpaper {
 		padding: 262px 0;
-		background-image: url('../assets/img/welcome-wallpaper.png');
+		background-image: url('../assets/img/welcome-wallpaper.webp');
 		background-size: cover;
 		background-repeat: no-repeat;
 		text-align: center;
