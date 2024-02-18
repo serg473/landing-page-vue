@@ -16,7 +16,7 @@ $bg-btn: #71a3ff;
 	border: 1px solid $bg-btn;
 	border-radius: 10px;
 	width: 200px;
-	height: 40px;
+	height: auto;
 	color: #3d3d3d;
 	padding: 11px 0 9px 0;
 	background: #ffffff;
