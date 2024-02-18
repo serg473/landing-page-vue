@@ -92,7 +92,7 @@ import FormFeedback from '../components/FormFeedback.vue'
 }
 .about {
 	padding: 90px 0;
-	background-image: url('../assets/img/2-section-wallpaper.jpg');
+	background-image: url('../assets/img/2-section-wallpaper.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-weight: 400;
