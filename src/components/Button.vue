@@ -1,10 +1,12 @@
 <script setup>
 const props = defineProps({
-	isActive: Boolean,
+	isActive: {
+		type: Boolean
+	},
 })
 </script>
 <template>
-	<button class="btn" :class="{ active: isActive }">
+	<button class="btn" :class="{ 'active': isActive }">
 		<slot></slot>
 	</button>
 </template>

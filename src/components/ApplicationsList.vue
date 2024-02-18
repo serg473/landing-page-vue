@@ -25,7 +25,7 @@ const store = useApplications()
 	display: flex;
 	flex-wrap: wrap;
 	gap: 45px 85px;
-	@media screen and (max-width: 1400px) {
+	@media screen and (max-width: 1439px) {
 		gap: 45px 77px;
 	}
 	@media screen and (max-width: 1200px) {
