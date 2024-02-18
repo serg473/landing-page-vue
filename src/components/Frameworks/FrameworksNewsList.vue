@@ -28,6 +28,11 @@ const store = useFrameworks()
 	display: flex;
 	background: white;
 	padding: 0 102px 0 122px;
+	@media screen and (max-width: 1400px) {
+		flex-direction: column;
+		gap: 25px;
+		padding: 15px;
+	}
 	img {
 		width: 345px;
 		height: 100%;

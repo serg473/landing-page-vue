@@ -97,9 +97,32 @@ import FormFeedback from '../components/FormFeedback.vue'
 	background-size: cover;
 	font-weight: 400;
 	margin-bottom: 44px;
+	@media screen and (max-width: 1040px) {
+		padding: 50px 0;
+	}
+	&__preview {
+		@media screen and (max-width: 1040px) {
+			order: 0;
+			width: 100%;
+			padding: 0;
+		}
+		img {
+			@media screen and (max-width: 1040px) {
+				width: 100%;
+			}
+		}
+	}
+	&__article {
+		@media screen and (max-width: 1040px) {
+			order: 1;
+		}
+	}
 	&__container {
 		display: flex;
 		gap: 40px;
+		@media screen and (max-width: 1040px) {
+			flex-wrap: wrap;
+		}
 	}
 	&__title {
 		font-weight: bold;

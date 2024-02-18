@@ -40,12 +40,19 @@ const props = defineProps({
 	&__content {
 		padding: 26px 0 26px 0;
 		position: relative;
+		@media screen and (max-width: 1040px) {
+			padding: 0;
+		}
 	}
 	&__group-btn {
 		position: absolute;
 		bottom: 23px;
 		display: flex;
 		gap: 25px;
+		@media screen and (max-width: 1040px) {
+			position: static;
+			margin-top: 15px;
+		}
 	}
 	&__title {
 		font-weight: 700;

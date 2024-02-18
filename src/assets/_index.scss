@@ -6,6 +6,9 @@
 html {
 	scroll-behavior: smooth;
 }
+html,body{
+	overflow-x: hidden;
+}
 body {
 	font-family: 'Gothic A1', 'sans-serif';
 	font-weight: 400;
@@ -18,9 +21,16 @@ body {
 	max-width: 1440px;
 	margin: 0 auto;
 	padding: 0 15px;
+	@media screen and (max-width: 1400px) {
+		max-width: 1199px;
+	}
+	@media screen and (max-width: 1040px) {
+		max-width: 960px;
+	}
 }
 .container-content {
 	max-width: 1195px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
+

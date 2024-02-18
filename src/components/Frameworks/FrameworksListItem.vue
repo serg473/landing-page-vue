@@ -33,11 +33,18 @@ const props = defineProps({
 	border-radius: 10px;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
 	background: #fff;
+	@media screen and (max-width: 1040px) {
+		gap: 40px;
+	}
 	&__description {
 		color: #808080;
 		margin-top: 10px;
 		height: 100%;
 		line-height: 26px;
+		@media screen and (max-width: 1040px) {
+			height: auto;
+			margin-bottom: 15px;
+		}
 	}
 	&__content {
 		padding: 27px 0 23px 0;
@@ -48,6 +55,15 @@ const props = defineProps({
 		bottom: 23px;
 		display: flex;
 		gap: 25px;
+		@media screen and (max-width: 1040px) {
+			flex-direction: column;
+			position: static;
+			width: 100%;
+			padding-right: 15px;
+			button {
+				width: 100%;
+			}
+		}
 	}
 	&__title {
 		font-weight: 700;

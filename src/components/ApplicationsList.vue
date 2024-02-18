@@ -1,7 +1,7 @@
 <script setup>
-import ApplicationsListItem from './ApplicationsListItem.vue'
-import { useApplications } from '../store/applications.js'
 import { getImageUrl } from '@/utils/imgUrlDynamic.js'
+import { useApplications } from '../store/applications.js'
+import ApplicationsListItem from './ApplicationsListItem.vue'
 const store = useApplications()
 </script>
 <template>
@@ -25,5 +25,8 @@ const store = useApplications()
 	display: flex;
 	flex-wrap: wrap;
 	gap: 45px 85px;
+	@media screen and (max-width: 1400px) {
+		gap: 45px 70px;
+	}
 }
 </style>

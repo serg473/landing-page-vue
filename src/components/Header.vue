@@ -1,6 +1,4 @@
-<script setup>
-
-</script>
+<script setup></script>
 <template>
 	<header class="header">
 		<img class="header__logo" src="../assets/img/logo.svg" alt="Logo" />
@@ -27,6 +25,9 @@ $link: #3d3d3d;
 	font-family: 'Roboto', sans-serif;
 	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
 	background: #fff;
+	@media screen and (max-width: 1040px) {
+		padding: 21px 77px 21px 77px;
+	}
 }
 
 .menu {

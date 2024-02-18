@@ -137,6 +137,10 @@ const submit = async () => {
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 15px 13.95px;
+		@media screen and (max-width: 1400px) {
+			width: auto;
+			justify-content: flex-start;
+		}
 	}
 	&__submit {
 		margin-top: 26px;
