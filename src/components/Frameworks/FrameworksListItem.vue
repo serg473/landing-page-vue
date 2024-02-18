@@ -2,8 +2,7 @@
 import Button from '../Button.vue'
 const props = defineProps({
 	item: {
-		type: Object,
-		required: true,
+		type: Object || Array,
 	},
 })
 </script>
@@ -20,7 +19,7 @@ const props = defineProps({
 				<slot name="desc" :desc="item.description"></slot>
 			</div>
 			<div class="framework-item__group-btn">
-				<Button isActive="true">Read more</Button>
+				<Button :isActive="true">Read more</Button>
 				<Button>Webinar</Button>
 			</div>
 		</div>

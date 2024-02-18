@@ -20,12 +20,17 @@ const props = defineProps({
 	position: relative;
 	border-radius: 2px;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+	transition: opacity 0.4s ease-in;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.7;
+	}
 	@media screen and (max-width: 1200px) {
 		width: 248px;
 	}
-	@media screen and (max-width:640px) {
+	@media screen and (max-width: 640px) {
 		width: 100%;
-    height: auto;
+		height: auto;
 	}
 	&__title {
 		color: #fff;

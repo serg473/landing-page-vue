@@ -20,7 +20,7 @@ const props = defineProps({
 				<slot name="desc" :desc="item.description"></slot>
 			</div>
 			<div class="framework-item__group-btn">
-				<Button isActive="true">{{ item.button }}</Button>
+				<Button :isActive="true">{{ item.button }}</Button>
 			</div>
 		</div>
 	</div>
@@ -47,7 +47,7 @@ const props = defineProps({
 	&__content {
 		padding: 26px 0 26px 0;
 		position: relative;
-		@media screen and (max-width: 1400px) {
+		@media screen and (max-width: 1439px) {
 			padding: 0;
 		}
 	}
@@ -56,7 +56,7 @@ const props = defineProps({
 		bottom: 13px;
 		display: flex;
 		gap: 25px;
-		@media screen and (max-width: 1400px) {
+		@media screen and (max-width: 1439px) {
 			position: static;
 			margin-top: 15px;
 		}

@@ -1,6 +1,6 @@
 <script setup>
 import { useVuelidate } from '@vuelidate/core'
-import { email, minLength, required } from '@vuelidate/validators'
+import { email, minLength, numeric, required } from '@vuelidate/validators'
 import { reactive } from 'vue'
 import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
@@ -15,7 +15,7 @@ const validations = {
 	job: { required, minLength: minLength(3) },
 	country: { required, minLength: minLength(3) },
 	state: { required, minLength: minLength(3) },
-	zip: { required, minLength: minLength(1) },
+	zip: { required, numeric, minLength: minLength(1) },
 }
 const form = reactive({
 	firstName: '',
@@ -122,7 +122,7 @@ const submit = async () => {
 				:errors="v$.zip.$errors"
 			/>
 			<div class="feedback__submit">
-				<Button @click="submit" isActive="true"> Submit </Button>
+				<Button @click="submit" :isActive="true"> Submit </Button>
 			</div>
 		</form>
 	</div>
@@ -144,9 +144,10 @@ const submit = async () => {
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 15px 13.95px;
-		@media screen and (max-width: 1400px) {
+		@media screen and (max-width: 1439px) {
 			width: auto;
 			justify-content: flex-start;
+			gap: 15px 26.95px;
 		}
 		@media screen and (max-width: 1200px) {
 			width: auto;
@@ -164,14 +165,14 @@ const submit = async () => {
 		}
 	}
 	.feedback__submit {
-		@media screen and (max-width: 1400px) {
+		@media screen and (max-width: 1439px) {
 			margin-top: 30px;
 		}
 		@media screen and (max-width: 640px) {
 			margin-top: 0;
 		}
 		button {
-			@media screen and (max-width: 1400px) {
+			@media screen and (max-width: 1439px) {
 				width: 280px;
 			}
 			@media screen and (max-width: 970px) {
