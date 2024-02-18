@@ -1,11 +1,11 @@
 <script setup>
-import Button from '../components/Button.vue'
-import BaseInput from './BaseInput.vue'
 import { useVuelidate } from '@vuelidate/core'
-import { required, email, minLength } from '@vuelidate/validators'
-import { reactive, ref } from 'vue'
+import { email, minLength, required } from '@vuelidate/validators'
+import { reactive } from 'vue'
 import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
+import Button from '../components/Button.vue'
+import BaseInput from './BaseInput.vue'
 
 const validations = {
 	firstName: { required, minLength: minLength(3) },
@@ -131,15 +131,53 @@ const submit = async () => {
 .feedback {
 	padding: 0 139px;
 	margin-top: 44px;
+	@media screen and (max-width: 970px) {
+		padding: 0 55px;
+	}
+	@media screen and (max-width: 640px) {
+		padding: 0 15px;
+		margin-top: 25px;
+	}
 	&__form {
 		width: 1155px;
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 15px 13.95px;
+		@media screen and (max-width: 1400px) {
+			width: auto;
+			justify-content: flex-start;
+		}
+		@media screen and (max-width: 1200px) {
+			width: auto;
+			justify-content: flex-start;
+			gap: 15px 95.95px;
+		}
+		@media screen and (max-width: 970px) {
+			gap: 25px 95.95px;
+		}
 	}
 	&__submit {
 		margin-top: 26px;
+		@media screen and (max-width: 1200px) {
+			width: 100%;
+		}
+	}
+	.feedback__submit {
+		@media screen and (max-width: 1400px) {
+			margin-top: 30px;
+		}
+		@media screen and (max-width: 640px) {
+			margin-top: 0;
+		}
+		button {
+			@media screen and (max-width: 1400px) {
+				width: 280px;
+			}
+			@media screen and (max-width: 970px) {
+				width: 100%;
+			}
+		}
 	}
 }
 </style>

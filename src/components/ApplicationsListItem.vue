@@ -20,6 +20,13 @@ const props = defineProps({
 	position: relative;
 	border-radius: 2px;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+	@media screen and (max-width: 1200px) {
+		width: 248px;
+	}
+	@media screen and (max-width:640px) {
+		width: 100%;
+    height: auto;
+	}
 	&__title {
 		color: #fff;
 		background-color: #3d3d3d;

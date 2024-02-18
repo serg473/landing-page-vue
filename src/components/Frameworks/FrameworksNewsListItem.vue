@@ -31,27 +31,55 @@ const props = defineProps({
 	gap: 20px;
 	border-radius: 10px;
 	background: #fff;
+	@media screen and (max-width: 640px) {
+		flex-direction: column;
+	}
 	&__description {
 		color: #808080;
 		margin-top: 10px;
 		padding-right: 20px;
 		line-height: 26px;
+		@media screen and (max-width: 970px) {
+			font-size: 14px;
+			line-height: 23px;
+		}
 	}
 	&__content {
 		padding: 26px 0 26px 0;
 		position: relative;
+		@media screen and (max-width: 1400px) {
+			padding: 0;
+		}
 	}
 	&__group-btn {
 		position: absolute;
 		bottom: 23px;
 		display: flex;
 		gap: 25px;
+		@media screen and (max-width: 1400px) {
+			position: static;
+			margin-top: 15px;
+		}
+		button.btn {
+			@media screen and (max-width: 970px) {
+				font-size: 14px;
+				padding: 9px 0 9px 0;
+			}
+			@media screen and (max-width: 640px) {
+				width: 100%;
+			}
+		}
 	}
 	&__title {
 		font-weight: 700;
 		font-size: 24px;
 		color: #3d3d3d;
 		line-height: 30px;
+		@media screen and (max-width: 970px) {
+			font-size: 20px;
+			line-height: 20px;
+		}
 	}
+
 }
 </style>

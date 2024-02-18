@@ -1,10 +1,11 @@
-<script setup>
-
-</script>
+<script setup></script>
 <template>
 	<header class="header">
 		<img class="header__logo" src="../assets/img/logo.svg" alt="Logo" />
 		<nav class="header__menu menu">
+			<div class="menu__mobile">
+				<img src="../assets/img/menu.svg" alt="Menu mobile" />
+			</div>
 			<ul class="menu__list">
 				<li class="menu__list-item"><a href="/">Home</a></li>
 				<li class="menu__list-item"><a href="#about">About us</a></li>
@@ -25,8 +26,17 @@ $link: #3d3d3d;
 	justify-content: space-between;
 	align-items: center;
 	font-family: 'Roboto', sans-serif;
-	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 10px 0 rgba(156, 124, 124, 0.25);
 	background: #fff;
+	@media screen and (max-width: 1200px) {
+		padding: 21px 77px 21px 77px;
+	}
+	@media screen and (max-width: 970px) {
+		padding: 21px 30px 21px 30px;
+	}
+	@media screen and (max-width: 640px) {
+		padding: 21px 15px 21px 15px;
+	}
 }
 
 .menu {
@@ -34,8 +44,22 @@ $link: #3d3d3d;
 		display: flex;
 		gap: 15px;
 		list-style: none;
+		@media screen and (max-width: 970px) {
+			display: none;
+		}
 	}
-
+	&__mobile {
+		display: none;
+		@media screen and (max-width: 970px) {
+			display: block;
+			width: 60px;
+			height: 60px;
+		}
+		@media screen and (max-width: 640px) {
+			width: 30px;
+			height: 30px;
+		}
+	}
 	&__list-item {
 		& > a {
 			text-decoration: none;

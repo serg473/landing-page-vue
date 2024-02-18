@@ -41,6 +41,9 @@ const emit = defineEmits(['update:modelValue'])
 	flex-direction: column;
 	width: 278px;
 	gap: 6px;
+	@media screen and (max-width: 970px) {
+		width: 100%;
+	}
 	label {
 		color: #3d3d3d;
 		line-height: 24px;
