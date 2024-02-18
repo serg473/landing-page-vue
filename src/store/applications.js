@@ -5,42 +5,42 @@ export const useApplications = defineStore('applications', {
 		listApplications: [
 			{
 				id: 1,
-				picture: '../assets/img/applications/app-1.png',
+				picture: 'app-1.png',
 				title: 'App 1',
 			},
 			{
 				id: 2,
-				picture: '../assets/img/applications/app-2.png',
+				picture: 'app-2.png',
 				title: 'App 2',
 			},
 			{
 				id: 3,
-				picture: '../assets/img/applications/app-3.png',
+				picture: 'app-3.png',
 				title: 'App 3',
 			},
 			{
 				id: 4,
-				picture: '../assets/img/applications/app-4.png',
+				picture: 'app-4.png',
 				title: 'App 4',
 			},
 			{
 				id: 5,
-				picture: '../assets/img/applications/app-5.png',
+				picture: 'app-5.png',
 				title: 'App 5',
 			},
 			{
 				id: 6,
-				picture: '../assets/img/applications/app-6.png',
+				picture: 'app-6.png',
 				title: 'App 6',
 			},
 			{
 				id: 7,
-				picture: '../assets/img/applications/app-7.png',
+				picture: 'app-7.png',
 				title: 'App 7',
 			},
 			{
 				id: 8,
-				picture: '../assets/img/applications/app-8.png',
+				picture: 'app-8.png',
 				title: 'App 8',
 			},
 		],
