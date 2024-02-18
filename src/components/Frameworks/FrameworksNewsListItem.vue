@@ -53,7 +53,7 @@ const props = defineProps({
 	}
 	&__group-btn {
 		position: absolute;
-		bottom: 23px;
+		bottom: 13px;
 		display: flex;
 		gap: 25px;
 		@media screen and (max-width: 1400px) {
@@ -80,6 +80,5 @@ const props = defineProps({
 			line-height: 20px;
 		}
 	}
-
 }
 </style>

@@ -102,7 +102,7 @@ import FormFeedback from '../components/FormFeedback.vue'
 		}
 		@media screen and (max-width: 640px) {
 			font-size: 26px;
-			line-height: 10.5px;
+			line-height: 31.5px;
 		}
 	}
 	&__subtitle {
@@ -111,7 +111,7 @@ import FormFeedback from '../components/FormFeedback.vue'
 		line-height: 45px;
 		@media screen and (max-width: 640px) {
 			font-size: 24px;
-			line-height: 69.5px;
+			line-height: 51.5px;
 		}
 	}
 }
