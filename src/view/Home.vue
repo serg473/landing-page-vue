@@ -30,7 +30,7 @@ import FormFeedback from '../components/FormFeedback.vue'
 					</div>
 				</div>
 				<div class="about__preview">
-					<img src="../assets/img/information/about.png" alt="About" />
+					<img src="../assets/img/about.png" alt="About" />
 				</div>
 			</div>
 		</div>

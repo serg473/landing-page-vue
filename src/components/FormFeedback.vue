@@ -4,7 +4,7 @@ import BaseInput from './BaseInput.vue'
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
 import { reactive, ref } from 'vue'
-import { toast } from 'v.ue3-toastify'
+import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
 
 const validations = {
